@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+{% block title %}Edit Grade{% endblock %}
+{% block body %}
+ <h1>Editer Grade</h1>
+ {{ include('grade/_form.html.twig', {'button_label': 'Mettre à jour'})
+}}
+ <a href="{{ path('allgradesLink') }}">Retour à la liste</a>
+{% endblock %}

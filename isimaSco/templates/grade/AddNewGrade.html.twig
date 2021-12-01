@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block title %}Grade{% endblock %}
+{% block body %}
+ <h1>Grade</h1>
+ <table class="table">
+ <tbody>
+ <tr>
+ <th>Id</th>
+ <td>{{ grade.id }}</td>
+ </tr>
+ <tr>
+ <th>Libelle</th>
+ <td>{{ grade.Libelle }}</td>
+ </tr>
+ <tr>
+ <th>Description</th>
+ <td>{{ grade.Description }}</td>
+ </tr>
+ </tbody>
+ </table>
+ <a href="{{ path('allgradesLink') }}">Rétour à la liste</a>
+ <a href="{{ path('grade_edit', {'id': grade.id}) }}">editer</a>
+{% endblock %}
